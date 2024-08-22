@@ -1,0 +1,12 @@
+table {
+	margin: 0 auto;
+	font-size: 20pt;
+	text-align: center;
+}
+
+#result,
+form {
+	/* display: block; */
+	width: 250px;
+	margin: 0 auto;
+}

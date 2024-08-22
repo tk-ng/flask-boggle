@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="static/style.css" />
+		<title>Document</title>
+	</head>
+	<body>
+		<p>
+			Score:
+			<span id="score">0</span>
+		</p>
+		<p>
+			Game:
+			<span id="try">{{nplays}}</span>
+		</p>
+		<p>
+			Highest Score:
+			<span id="highest-score">{{highest_score}}</span>
+		</p>
+		<table>
+			<!-- prettier-ignore -->
+			{% for row in board %}
+			<tr>
+				{% for letter in row %}
+				<td>{{letter}}</td>
+				{% endfor %}
+			</tr>
+			{% endfor %}
+		</table>
+
+		<form method="POST">
+			<input
+				type="text"
+				placeholder="Enter a word you find"
+				id="guessed-word"
+				required
+			/>
+			<button>Submit</button>
+		</form>
+
+		<div id="result">
+			<p></p>
+		</div>
+		<script src="https://unpkg.com/jquery"></script>
+		<script src="https://unpkg.com/axios/dist/axios.js"></script>
+		<script src="static/app.js"></script>
+	</body>
+</html>
